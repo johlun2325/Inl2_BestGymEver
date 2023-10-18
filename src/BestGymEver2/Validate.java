@@ -16,11 +16,11 @@ import java.util.Scanner;
 public class Validate {
     boolean clientFound = false;
 
-    String errFileNotFound = "Filen kunde inte hittas";
-    String errIOProblem = "Filen kunde inte läsas";
-    String errCouldNotWrite = "Kunde inte skriva till filen, innehåll saknas";
-    String promptToUser = "Skriv in fullständigt namn eller personnummer(10 siffror):  ";
-    String noValidInput = "Du har inte angett ett giltigt sökord";
+    protected String errFileNotFound = "Filen kunde inte hittas";
+    protected String errIOProblem = "Filen kunde inte läsas";
+    protected String errCouldNotWrite = "Kunde inte skriva till filen, innehåll saknas";
+    protected String promptToUser = "Skriv in fullständigt namn eller personnummer(10 siffror):  ";
+    protected String noValidInput = "Du har inte angett ett giltigt sökord";
 
 
     public List<String> readFromFileToList(Path path) {
@@ -51,7 +51,7 @@ public class Validate {
 
     public String getSearchInput(boolean isTest, String testValue) throws NoSuchElementException{
         Scanner sc;
-        String input = "";
+        String input;
 
         if (isTest) {
             sc = new Scanner(testValue);

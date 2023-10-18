@@ -12,8 +12,8 @@ public class RunProgram {
     private final String workoutStatisticsPayingClients = "src/BestGymEver2/clientsWorkouts.txt";
 
     // 2 paths för läsning respektive skapande och skrivning till
-    protected Path pathClientsFile = Paths.get(allPastClientsFile);
-    protected Path pathWritePayingClients = Paths.get(workoutStatisticsPayingClients);
+     private final Path pathClientsFile = Paths.get(allPastClientsFile);
+    private final Path pathWritePayingClients = Paths.get(workoutStatisticsPayingClients);
 
     //två listor för hantering av kunddata
     private List<String> listOfClients;
